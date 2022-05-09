@@ -1,0 +1,421 @@
+/* Reset and Common Style */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* End of Reset and Common Style */
+
+/* Navbar */
+.navbar {
+    z-index: 15;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(90, 146, 172,0.6);
+    box-shadow: .2rem .2rem .5rem black;
+}
+
+.navbar-link {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 3rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: color .9s;
+}
+
+.navbar-link::before {
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    background-color: #333;
+    position: absolute;
+    right: -15%;
+    bottom: -.3rem;
+    transition: width .2s;
+
+}
+
+.navbar-link:hover {
+    color: #333;
+}
+
+.navbar-link:hover::before {
+    width: 130%;
+}
+/* End of Navbar */
+
+/* Section 1 */
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(122, 178, 204, 0.442), rgba(202, 209, 212, 0.471)), url(img/bg.jpg) center no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.section-1-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(90, 146, 172);
+    padding: 0 3rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    border-bottom: 0.3rem solid white;
+    transform: skew(-10deg);
+}
+
+.person-img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .7rem dotted rgb(90, 146, 172);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem;
+    opacity: 0.9;
+}
+
+.person-name {
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgb(90, 146, 172);
+    margin: 5rem 0;
+    padding: 0.5rem 3rem;
+    letter-spacing: 0.3rem;
+    transform: skew(-10deg);
+}
+
+.section-1-btn {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #333;
+    background-color: white;
+    border: .3rem solid #333;
+    padding: .3rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+/* End of Section 1 */
+
+/* Section 2 */
+.section-2 {
+    background: linear-gradient(rgba(122, 178, 204, 0.442), rgba(202, 209, 212, 0.471));
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0 10rem 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-2-heading {
+    font-size: 5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-bottom: 10rem;
+    border-bottom: .3rem solid #333;
+    text-shadow: .2rem .2rem .5rem #555;
+}
+
+.about-me {
+    margin-bottom: 7rem;
+    font-size: 1.7rem;
+    padding-left: 14rem;
+    padding-right: 14rem;
+    text-align: justify;
+}
+
+.skills {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill:first-child,
+.skill:last-child {
+    align-self: flex-start;
+}
+
+.skill i {
+    font-size: 6rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-shadow: .1rem .1rem .5rem #555;
+}
+
+.skill h2 {
+    font-size: 2rem;
+    color: white;
+    background-color: #777;
+    width: 25rem;
+    letter-spacing: .3rem;
+    transform: skew(-10deg);
+    box-shadow: .2rem .2rem .5rem #555;
+}
+/* End of Section 2 */
+
+/* Section 3 */
+.section-3 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(122, 178, 204, 0.442), rgba(202, 209, 212, 0.471));
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-3-heading {
+    font-size: 5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-bottom: 10rem;
+    border-bottom: .3rem solid #333;
+    text-shadow: .2rem .2rem .5rem #555;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: white;
+    box-shadow: .3rem .3rem .5rem #777;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-text {
+    text-align: center;
+    letter-spacing: .1rem;
+    position: absolute;
+    top: -10rem;
+    transition: top 0.3s;
+    z-index: 10;
+}
+
+.project:hover .project-text {
+    top: 3rem;
+    transition: top .3s .3s;
+}
+
+.project-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.project-technologies {
+    font-size: 1.8rem;
+    color: rgb(29, 82, 107);
+}
+
+.project img {
+    width: 30rem;
+    height: 170px;
+    transition: opacity 0.3s;
+}
+
+.project:hover .project-img {
+    opacity: .2;
+}
+
+.project-link {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.1rem;
+    border: .3rem solid rgb(88, 141, 165);
+    padding: 0.1rem;
+    background-color: white;
+    position: absolute;
+    bottom: -5rem;
+    transition: bottom 0.3s;
+}
+
+.project:hover .project-link {
+    bottom: 3rem;
+    transition: bottom .3s .3s;
+}
+/* End of Section 3 */
+
+/* Section-4 */
+.section-4 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(122, 178, 204, 0.442), rgba(202, 209, 212, 0.471));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-4-heading {
+    font-size: 5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-bottom: 10rem;
+    border-bottom: .3rem solid #333;
+    text-shadow: .2rem .2rem .5rem #555;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon-wrapper {
+    margin-right: 4rem;
+}
+
+.icon-wrapper:last-child {
+    margin-right: 0;
+    padding-top: 0.6rem;
+}
+
+.icon-wrapper .icon {
+    font-size: 8rem;
+    cursor: pointer;
+    color: rgb(90, 146, 172);
+    transition: color 0.4s;
+}
+
+.icon:hover {
+    color: #333;
+}
+/* End of Section-4 */
+
+/* Responsive */
+@media(max-width:1200px){
+    .skills{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .skill{
+        margin: 3rem 2rem;
+    }
+    .section-1-heading{
+        text-align: center;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+    .section-2-heading{
+        font-size: 4rem;
+        margin-bottom: 7rem;
+    }
+    .section-3-heading{
+        font-size: 4rem;
+        margin-bottom: 7rem;
+    }
+    .section-4-heading{
+        font-size: 4rem;
+        margin-bottom: 7rem;
+    }
+    .about-me {
+        margin-bottom: 6rem;
+        font-size: 1.6rem;
+    }
+    .skill i {
+        font-size: 5rem;
+    }
+    
+    .skill h2 {
+        font-size: 1.7rem;
+    }
+    .project-name {
+        font-size: 2.3rem;
+    }
+    .project-technologies {
+        font-size: 1.4rem;
+    }
+    .icon-wrapper .icon {
+        font-size: 7rem;
+    }
+}
+
+@media(max-width:800px){
+    .section-1-heading{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .section-3-heading{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .section-4-heading{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .navbar-link{
+        font-size: 1.5rem;
+    }
+    .section-2-heading{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    .about-me {
+        margin-bottom: 5rem;
+        font-size: 1.4rem;
+    }
+    .skill i {
+        font-size: 4rem;
+    }
+    .skill h2 {
+        font-size: 1.3rem;
+    }
+    .project-name {
+        font-size: 1.7rem;
+    }
+    .project-technologies {
+        font-size: 1.2rem;
+    }
+    .icon-wrapper .icon {
+        font-size: 5rem;
+    }
+}
+/* End of Responsive */
